@@ -1,10 +1,11 @@
 function addTask() {
-  const input = document.getElementById("task-input");
-  const task = input.value.trim();
+  const taskInput = document.getElementById("task");
+  const task = taskInput.value.trim();
+
   if (task === "") return;
 
   const li = document.createElement("li");
   li.textContent = task;
   document.getElementById("task-list").appendChild(li);
-  input.value = "";
+  taskInput.value = "";
 }
